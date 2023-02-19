@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maze</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="../js/index.js" defer></script>
+</head>
+<body>
+
+<section id="homepage">
+    <button type="button" class="infoBtn">?</button>
+    <h1>RobotMaze</h1>
+    <form method="get" action="/game/play" id="play">
+        <label for="firstName">First Name:</label><br><br>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        <label for="lastName">Last Name:</label><br><br>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        <label for="difficulty_label" id="difficulty_label">Difficulty</label>
+        <select name="difficulty" id="difficulty">
+            <option value="noob">Noob</option>
+            <option value="medium">Medium</option>
+            <option value="mazeMaster">Maze master</option>
+        </select>
+        <div>
+            <button type="button" class="ready-button">Ready</button>
+            <button type="button" class="ranking-button">Ranking</button>
+        </div>
+    </form>
+</section>
+
+<section id="ranking">
+    <h1>Ranking</h1>
+    <button class="back-button">Back</button>
+    <table>
+        <thead>
+        <tr>
+            <th>Position</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Points</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+    </table>
+    <div class="ranking-container">
+        <table class="ranking">
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+<section id="labyrinth">
+    <h1>RobotMaze</h1>
+    <h2 class="points">0</h2>
+    <div class="end-game-btn">
+        <a href="http://localhost:4000">
+            <button type="button">End</button>
+        </a>
+    </div>
+    <div id="labyrinth-container"></div>
+</section>
+
+<section id="info">
+    <button>Back</button>
+    <h2>Info</h2>
+    <p>It is easy. The robot has to get from the first cell in the top left, to the last cell in the top right, between
+        narrow spaces and mood changes!</p>
+    <div class="robot-states">
+        <div class="robot-info red-robot">
+            <img src="../img/robot.png" alt="robot image">
+            <p>
+                <span>Red means mad</span><br>
+                He has been locked up in the maze and is running madly toward the exit, one cell at a time, calculating
+                the shortest route.
+            </p>
+        </div>
+        <div class="robot-info green-robot">
+            <img src="../img/robot.png" alt="robot image">
+            <p>
+                <span>Green means calm</span><br>
+                He remembered that he did not need food and water. He takes his time and walks to the exit, calculating
+                the shortest route, one cell at a time
+            </p>
+        </div>
+        <div class="robot-info yellow-robot">
+            <img src="../img/robot.png" alt="robot image">
+            <p>
+                <span>Yellow means vigorous</span><br>
+                He takes advantage of recent upgrades made to his robo-legs by jumping two cells at a time to the exit,
+                taking the shortest route
+            </p>
+        </div>
+        <div class="robot-info cyan-robot">
+            <img src="../img/robot.png" alt="robot image">
+            <p>
+                <span>Cyan means panic</span><br>
+                It is a claustrophobic robot. It doesn't like enclosed, tight spaces. It runs randomly looking for the
+                exit
+            </p>
+        </div>
+        <div class="robot-info grey-robot">
+            <img src="../img/robot.png" alt="robot image">
+            <p>
+                <span>Grey means step</span><br>
+                Little robot-ghosts. They remind the robot of the steps it took to get out of the maze
+            </p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

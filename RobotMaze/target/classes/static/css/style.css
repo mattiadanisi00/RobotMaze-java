@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    background-color: white;
+}
+
+#labyrinth {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+}
+
+#labyrinth-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr); /* 2 columns, each taking up 1 fraction of the available space */
+    grid-template-rows: repeat(16, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.box {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.box_b {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    background-color: black;
+}
+
+.RED {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: red;
+}
+
+.GREEN {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: #0df21e;
+}
+
+.CYAN {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: #02fdf1;
+}
+
+.YELLOW {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+#homepage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+#homepage form {
+    font-size: 1.5rem;
+    gap: 0.5rem;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    cursor: text;
+    margin-bottom: 2rem;
+}
+
+select {
+    display: flex;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: solid 2px;
+    font-size: 1rem;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 6.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d7d7d7;
+}
+
+p {
+    line-height: 1.4rem;
+}
+
+.infoBtn {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    position: absolute;
+    right: 0.8rem;
+    top: -6rem;
+}
+
+#ranking {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    display: none;
+}
+
+#ranking h1 {
+    margin-bottom: 3rem;
+}
+
+.ranking-container {
+    max-height: 30vh;
+    overflow-y: scroll;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    overflow-y: scroll;
+    border: solid 0.4rem;
+}
+
+th, td {
+    border: 0.2rem solid #dddddd;
+    padding: 1rem;
+    width: 15rem;
+    text-align: left;
+}
+
+
+th {
+    background-color: #dddddd;
+}
+
+.back-button {
+    position: absolute;
+    left: 7rem;
+    bottom: 4rem;
+}
+
+.robot {
+    display: inline-block;
+    border: 1px solid black;
+    background-image: url('../img/robot.png');
+    background-size: 2.5rem 2.5rem;
+}
+
+.robot-step {
+    display: inline-block;
+    border: 1px solid black;
+    background-image: url('../img/robot.png');
+    background-size: 2.5rem 2.5rem;
+    filter : opacity(30%);
+}
+
+.robot-step-lighter {
+    display: inline-block;
+    border: 1px solid black;
+    background-image: url('../img/robot.png');
+    background-size: 2.5rem 2.5rem;
+    filter: opacity(15%);
+}
+
+.robot-step-final {
+    display: inline-block;
+    border: 1px solid black;
+    background-image: url('../img/robot.png');
+    background-size: 2.5rem 2.5rem;
+    filter : invert(96%) sepia(1%) saturate(0%) hue-rotate(119deg) brightness(92%) contrast(88%)
+}
+
+.points {
+    font-size: 6rem;
+    position: absolute;
+    left: 20rem;
+}
+
+.end-game-btn {
+    display: flex;
+    gap: 2rem;
+    visibility: hidden;
+}
+
+.end-game-btn button,
+.end-game-btn a {
+    margin: 0;
+}
+
+#info {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding: 4rem;
+    display: none;
+}
+
+#info button {
+    position: absolute;
+    left: 0.8rem;
+    top: -6rem;
+}
+
+#info h2 {
+    margin-bottom: 2rem;
+}
+
+#info p {
+    text-align: center;
+}
+
+.robot-states {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+
+.robot-info {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+#info .robot-info p {
+    text-align: left;
+}
+
+.robot-info img {
+    width: 5rem;
+}
+
+.robot-info span {
+    font-size: 1.2rem;
+    padding: 0.1rem;
+}
+
+.red-robot img,
+.red-robot span {
+    filter: invert(23%) sepia(94%) saturate(3701%) hue-rotate(346deg) brightness(88%) contrast(100%);
+}
+
+
+.green-robot img,
+.green-robot span {
+    filter: invert(64%) sepia(82%) saturate(2542%) hue-rotate(78deg) brightness(108%) contrast(108%);
+}
+
+.yellow-robot img,
+.yellow-robot span {
+    filter: invert(96%) sepia(67%) saturate(5073%) hue-rotate(7deg) brightness(113%) contrast(94%);
+}
+
+.cyan-robot img,
+.cyan-robot span {
+    filter: invert(85%) sepia(80%) saturate(7089%) hue-rotate(90deg) brightness(105%) contrast(112%);
+}
+
+.grey-robot img,
+.grey-robot span {
+    filter : invert(96%) sepia(1%) saturate(0%) hue-rotate(119deg) brightness(92%) contrast(88%);
+}
+
+@media (min-width: 992px) {
+
+    .box,
+    .box_b,
+    .GREEN,
+    .YELLOW,
+    .RED,
+    .CYAN {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .robot {
+        width: 2.2rem;
+        height: 2.2rem;
+        background-size: 2.2rem 2.2rem;
+    }
+
+    .points {
+        font-size: 5rem;
+        left: 8rem;
+    }
+
+    .robot-info img,
+    .robot-info span {
+        width: 3.2rem;
+        font-size: 1rem;
+    }
+
+    .robot-states {
+        gap: 3rem;
+    }
+}
+
+
+
+
+
